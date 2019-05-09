@@ -1,0 +1,64 @@
+page {
+	color: #333;
+}
+.row{
+  position: relative;
+	height: 40px;
+}
+
+.textinput {
+	position: absolute;
+  left: 230rpx;
+  top: 5px;
+	border-radius: 2px;
+	border: 1px solid lightblue;
+	width: 400rpx;
+	height: 31px;
+  font-size: 13px;
+  line-height: 31px;
+	background-color: white;
+}
+
+.btn {
+	color: white;
+	background-color: #1AAD19;
+	margin-bottom: 12px;
+	border-radius: 5px;
+	width: 690rpx;
+	padding-left: 14px;
+	padding-right: 14px;
+	box-sizing: border-box;
+	font-size: 18px;
+	text-align: center;
+	line-height: 2.55555556;
+	border-radius: 5px;
+	-webkit-tap-highlight-color: transparent;
+	overflow: hidden;
+
+}
+
+.label{
+  position: absolute;
+  left: 10px;
+  top: 0px;
+	font-size: 14px;
+  width: 200rpx;
+  line-height: 40px;
+	
+}
+.fl{
+	float: left;
+}
+
+.datacon{
+   margin-bottom: 100rpx;
+
+}
+
+.tip{
+  margin-top: 20px;
+  color: red;
+  font-size: 16px;
+  text-align: center;
+
+}

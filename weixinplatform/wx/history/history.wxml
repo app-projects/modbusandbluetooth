@@ -1,0 +1,12 @@
+<!--history/history.wxml-->
+<view class='devices_summary'> 
+<text > 修改记录: </text>
+ </view>
+
+<scroll-view class="modifylog_list" scroll-y scroll-with-animation>
+
+  <view wx:for="{{channels}}" wx:key="index" style="font-size: 12px; margin-top: 10px;">
+    <view>特性UUID: {{item.uuid}}</view>
+    <view>特性值: {{item.value}}</view>
+  </view>
+</scroll-view>

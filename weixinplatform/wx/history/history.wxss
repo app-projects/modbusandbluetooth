@@ -1,0 +1,16 @@
+/* history/history.wxss */
+
+
+.modifylog_list {
+  height: 100%;
+  margin: 0px 5px;
+  border: 1px solid #EEE;
+  border-radius: 5px;
+  width: auto;
+}
+
+.devices_summary {
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 14px;
+}

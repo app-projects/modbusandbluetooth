@@ -1,0 +1,33 @@
+{
+	"pages": [
+    "index/index",
+		"history/history"
+	],
+	"window": {
+"navigationBarBackgroundColor": "#ffffff",
+"navigationBarTextStyle": "black",
+"navigationBarTitleText": "Modbus监控",
+"backgroundColor": "#eeeeee",
+"backgroundTextStyle": "light",
+	"enablePullDownRefresh": true
+	},
+	"tabBar": {
+		"color": "black",
+		"selectedColor": "#1AAD19",
+		"backgroundColor": "#EEEEEE",
+		"borderStyle": "white",
+		"list": [{
+				"pagePath": "index/index",
+				"text": "交互",
+				"iconPath": "images/starts.png",
+				"selectedIconPath": "images/startsHL.png"
+			},
+			{
+				"pagePath": "history/history",
+				"text": "历史记录",
+				"iconPath": "images/trending.png",
+				"selectedIconPath": "images/trending.png"
+			}
+		]
+	}
+}

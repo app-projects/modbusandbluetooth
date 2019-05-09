@@ -1,0 +1,31 @@
+<wxs module="utils">
+	module.exports.max = function(n1, n2) {
+	return Math.max(n1, n2)
+	}
+	module.exports.len = function(arr) {
+	arr = arr || []
+	return arr.length
+	}
+</wxs>
+<button class='btn' bindtap="uiOpenBluetoothAdapter">扫描煤气设备</button>
+<button class='btn' bindtap="uiStopBlueSearch">停止搜索设备</button>
+<button class='btn' bindtap="uiCloseBleAdpter">结束煤气服务</button>
+
+
+<view class="devices_summary" style='font-size:13px'>已发现 {{devices.length}} 个蓝牙煤气设备：</view>
+
+<scroll-view class="device_list" scroll-y scroll-with-animation>
+
+<view wx:for="{{devices}}" wx:key="index" data-device-id="{{item.deviceId}}" data-name="{{item.name || item.localName}}"
+	 bindtap="uiconstructorOneDev" class="device_item" hover-class="device_item_hover">
+
+		<!--列表元素start-->
+		<view style="font-size: 16px; color: #333;">{{item.name}}</view>
+		<view style="font-size: 10px">信号强度: {{item.RSSI}}dBm ({{utils.max(0, item.RSSI + 100)}}%)</view>
+		<view style="font-size: 10px">UUID: {{item.deviceId}}</view>
+		<view style="font-size: 10px">Service数量: {{utils.len(item.advertisServiceUUIDs)}}</view>
+
+		<!--列表元素end-->
+
+	</view>
+</scroll-view>

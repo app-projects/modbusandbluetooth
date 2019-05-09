@@ -1,0 +1,43 @@
+<!--connected area-->
+
+<view class="connected_info" wx:if="{{connected}}">
+	<view>
+		<text>已连接到 {{targetDev.name}}</text>
+
+		<view class='inputcon'>
+			<view class='row'>
+				<text class='item'> 通道ID: </text>
+				<input class='input item' style="background-color: #D3D3D3;" placeholder='请选中列表通道' disabled value="{{currSelectCh.chanId}}" />
+			</view>
+
+			<view class='row' style='top:70px'>
+				<text class='item'> 数据值: </text>
+				<input class='input item' bindinput="dataInputChange" value="{{dataInputShow}}" />
+			</view>
+		</view>
+
+		<view class="operation">
+
+			<button class='optbtn' wx:if="{{currSelectCh.canWrite}}" size="mini" bindtap="writeChan">写入</button>
+			<button class='optbtn' wx:if="{{currSelectCh.canRead}}" size="mini" bindtap="readChan">读取</button>
+
+			<button class='optbtn' size="mini" bindtap="closeBLEConnection">断开连接</button>
+		</view>
+	</view>
+
+</view>
+
+<view class="devices_summary" style='font-size:13px'>设备名:{{targetDev.name}} 拥有 {{totalChannels.length}}个通道：</view>
+
+<scroll-view class="device_list" scroll-y scroll-with-animation>
+
+	<view wx:for="{{totalChannels}}" wx:key="index" data-chan-id="{{item.chanid}}" data-dev-id="{{item.devId}}"
+	 data-can-write="{{item.canWrite}}" data-can-read="{{item.canRead}}" data-service-id="{{item.serviceId}}" bindtap="uiSelectdChannel"
+	 class="device_item" hover-class="device_item_hover">
+		<!--列表元素start-->
+		<view style="font-size: 12px; color: #333;">通道id:{{item.chanid}} </view>
+		<view style="font-size: 12px">读:{{item.canRead}} 写:{{item.canWrite}} 启动侦听:{{item.activeListener}}</view>
+		<view style="font-size: 12px">notify:{{item.canNotify}} indicate:{{item.canIndicate}}</view>
+		<!--列表元素end-->
+	</view>
+</scroll-view>

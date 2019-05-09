@@ -1,0 +1,29 @@
+<view class='datacon'>
+	<view class="row">
+		<view class="label "> 终端MAC </view>
+		<view> <input class="textinput" type="text" bindinput="macChange" placeholder='请输入MAC'   /></view>
+	</view>
+	<view class="row">
+		<view class="label"> 寄存器高8位 </view>
+		<view> <input class="textinput" type="text" bindinput="reghChange" placeholder='请输入寄存器高8位'  /></view>
+	</view>
+
+	<view class="row">
+		<view class="label"> 寄存器低8位 </view>
+		<input class="textinput" type="text" bindinput="reglChange" placeholder='请输入寄存器低8位'  />
+	</view>
+
+	<view class="row">
+		<view class="label"> 数据高8位 </view>
+		<input class="textinput" type="text" bindinput="datahChange" placeholder='数据高8位' value="{{datah_show}}" />
+	</view>
+
+	<view class="row">
+		<view class="label"> 数据低8位 </view>
+		<input class="textinput" type="text" bindinput="datalChange" placeholder='数据低8位' value="{{datal_show}}" />
+	</view>
+
+</view>
+<button class='btn' bindtap="uiSetting">设置</button>
+<button class='btn' bindtap="uiRead">读取</button>
+<view class="tip" style="color:{{tipColor}};"> {{tip}} </view>

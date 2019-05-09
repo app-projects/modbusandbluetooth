@@ -1,0 +1,48 @@
+page {
+	color: #333;
+}
+
+.devices_summary {
+	margin-top: 5px;
+	padding: 10px;
+	font-size: 14px;
+}
+
+.device_list {
+	height: 100%;
+	margin: 0 5rpx;
+	border: 1px solid #EEE;
+	border-radius: 5px;
+	width: auto;
+  /* background-color: red; */
+}
+
+
+.device_item {
+	border-bottom: 1px solid #EEE;
+	padding: 10px;
+	color: #666;
+}
+
+.device_item_hover {
+	background-color: rgba(0, 0, 0, .1);
+}
+
+.btn {
+	color: white;
+	background-color: #1AAD19;
+	margin-bottom: 2px;
+	border-radius: 5px;
+	width: 690rpx;
+
+	padding-left: 14px;
+	padding-right: 14px;
+	box-sizing: border-box;
+	font-size: 19px;
+	text-align: center;
+	line-height: 2.55555556;
+	border-radius: 5px;
+	-webkit-tap-highlight-color: transparent;
+	overflow: hidden;
+
+}

@@ -1,0 +1,41 @@
+
+<view class='devices_summary'>
+	<text> MAC地址为:{{mac}}修改备忘录: </text>
+</view>
+
+<scroll-view class="modifylog_list" scroll-y scroll-with-animation>
+
+	<view class="item" wx:for="{{list}}" wx:key="index">
+		<view class="line">
+			<view class="ele">
+				<view class="lbl fl">修改源IP:</view>
+				<view class="val fl">{{item.ip}}</view>
+			</view>
+			<view class="ele" style="left: 46%;">
+				<view class="lbl fl">修改时间: </view>
+				<view class="val fl"> {{item.timestamp}}</view>
+			</view>
+		</view>
+		<view class="line">
+			<view class="ele">
+				<view class="lbl fl">寄存器高8:</view>
+				<view class="val fl">0x{{item.regsetterh8}}</view>
+			</view>
+			<view class="ele" style="left: 46%;">
+				<view class="lbl fl">寄存器低8: </view>
+				<view class="val fl">0x{{item.regsetterl8}}</view>
+			</view>
+		</view>
+		<view class="line">
+			<view class="ele">
+				<view class="lbl  fl">数据高8:</view>
+				<view class="val  fl">0x{{item.datah8}}</view>
+			</view>
+			<view class="ele" style="left: 46%;">
+				<view class="lbl fl ">数据低8:</view>
+				<view class="val fl">0x{{item.datal8}}</view>
+			</view>
+		</view>
+
+	</view>
+</scroll-view>
